@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="pcl_ros" type="pointcloud_to_pcd" name="pointcloud_to_pcd" output="screen">
+        <remap from="input" to="workspace_pointcloud"/>
+        <param name="prefix" value="converted_pcd" />
+        <param name="fixed_frame" value="world" />
+        <param name="binary" value="false" />
+        <param name="compressed" value="false" />
+    </node>
+</launch>
